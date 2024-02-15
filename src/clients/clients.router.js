@@ -4,7 +4,7 @@ const methodNotAllowed = require('../errors/methodNotAllowed')
 
 
 router.route('/:clientId/workout/new').post(controller.addWorkout).all(methodNotAllowed)
-router.route('/:clientId/workout/:workoutId/exercises/:exerciseId').put(controller.editExercise).all(methodNotAllowed);
+router.route('/:clientId/workout/:workoutId/exercise/:exerciseId').put(controller.editExercise).all(methodNotAllowed);
 router.route('/:clientId/workout/:workoutId').get(controller.read).post(controller.addExercise).delete(controller.deleteWorkout).all(methodNotAllowed);
 router.route("/").get(controller.list).post(controller.createClient).all(methodNotAllowed)
 
